@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Правила Дорожного Движения</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <br><br><br>
+  <div class="header">
+    <h1>Правила Дорожного Движения</h1>
+    <form>
+      <h3 for="selector">Перейти к разделу :</h3>
+      <select id="selector" name="selector">
+        <option value="select">...</option>
+        <option value="nereg">НЕРЕГУЛИРУЕМЫЙ</option>
+        <option value="reg">РЕГУЛИРУЕМЫЙ</option>
+      </select>
+    </form>
+  </div>
+</header>
+
+<br>
+<!-- <br><br><br><br><br> -->
+
+<h1 class="label" id="nereg">НЕРЕГУЛИРУЕМЫЙ ПЕШЕХОДНЫЙ ПЕРЕХОД</h1>
+<div class="flex-container">
+  <div class="animation-block">
+    <img src="./img/nereg-perehod.jpg" alt="" class="a-img">
+    <img src="./img/man.jpg" alt="" class="a1-man">
+  </div>
+  <div class="rule-block">
+    <h2 class="rule-label">ПРАВИЛА</h2>
+    <br>
+    <h3 class="rule-text">
+      1) Подойди к краю дороги и остановись, чтобы убедиться, что дорога свободна.
+      <br><br>
+      2) Внимательно оцени ситуацию. Убедись, что все автомобили остановились.
+      <br><br>
+      3) Переходи дорогу, когда убедишься, что можно безопасно перейти. Смотри в обе стороны перед тем, как начать переход.
+      <br><br>
+      4) Не беги через дорогу! Ходи быстро, но не спеша.
+    </h3>
+  </div>
+</div>
+
+<br><hr><br>
+
+<h1 class="label" id="reg">РЕГУЛИРУЕМЫЙ ПЕШЕХОДНЫЙ ПЕРЕХОД</h1>
+<div class="flex-container">
+  <div class="animation-block">
+    <img src="./img/perehod-edit.jpg" alt="" class="a-img">
+    <div class="light">
+      <div class="red circle"></div>
+      <div class="yellow circle"></div>
+      <div class="green circle"></div>
+    </div>
+    <img src="./img/car.png" alt="" class="car">
+    <img src="./img/car2.png" alt="" class="car2">
+    <img src="./img/man.jpg" alt="" class="a2-man">
+  </div>
+  <div class="rule-block">
+    <h2 class="rule-label">ПРАВИЛА</h2>
+    <br>
+    <h3 class="rule-text">
+      1) Подойди к краю дороги и остановись. Убедись, что все автомобили остановились.
+      <br><br>
+      2) Смотри на светофор и следи за сигналами. Зеленый свет — можно идти, красный свет — жди.
+      <br><br>
+      3) Не беги и смотри в обе стороны!
+      <br><br>
+      4) Продолжай следить за автомобилями и светофором, даже когда начал переходить.
+    </h3>
+  </div>
+</div>
+
+<br><br>
+
+<footer>
+  <div class="footer">
+    <hr>
+    <p>N I K I T R O N</p>
+    <hr>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('selector').addEventListener('change', function() {
+    var selectedValue = this.value;
+    if (selectedValue === 'nereg') {
+      document.getElementById('nereg').scrollIntoView({ behavior: 'smooth' });
+    } else if (selectedValue === 'reg') {
+      document.getElementById('reg').scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
+</body>
+</html>
